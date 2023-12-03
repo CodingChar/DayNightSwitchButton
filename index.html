@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="btn-bg day">
+        <div class="btn off">
+            <span class="state">DAY</span>
+        </div>
+    </div>
+    
+
+    <script>
+        let btnBG = document.querySelector('.btn-bg')
+        let btn  = document.querySelector('.btn')
+        let sState = document.querySelector('.state')
+        let state = false;
+        
+        btnBG.addEventListener('click', (e) => {
+            state = !state
+            console.log(state)
+
+            if(state){
+                btnBG.className = 'btn-bg night'
+                btn.className = 'btn on'
+                sState.textContent = "NIGHT"
+            }else{
+                btnBG.className = 'btn-bg day'
+                btn.className = 'btn off'
+                sState.textContent = "DAY"
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+.btn-bg {
+  width: 6rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 20px;
+  padding: 0.3rem;
+
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+
+  border-radius: 50%;
+  transition: all 0.4s linear;
+}
+.state{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:800;
+}
+
+.on {
+  /*night*/
+  transform: translateX(calc(90%));
+  background-image: url("./moon.jpeg");
+  background-position: center;
+  background-repeat: fixed;
+  opacity:0.7;
+  box-shadow: 3px 2px 3px 2px rgba(255, 252, 252, 0.347);
+
+  color:white;
+}
+.off {
+  /*day*/
+  transform: translateX(calc(-5%));
+  background-image: url("./sun.jpeg");
+  opacity:0.7;
+  background-position: center;
+  background-repeat: fixed;
+  box-shadow: 5px 1px 1px 1px rgba(41, 40, 40, 0.347);
+  color:red;
+}
+
+.day {
+  background-image: url("./day.jpeg");
+  background-position: center;
+  background-repeat: fixed;
+}
+.night {
+  background-image: url("./night.jpeg");
+  background-position: center;
+  background-repeat: fixed;
+}
